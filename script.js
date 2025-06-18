@@ -1,3 +1,4 @@
+// DOM ELEMENTS
 const pomodoroTab = document.getElementById('pomodoro-tab');
 const restTab = document.getElementById('rest-tab');
 const longRestTab = document.getElementById('long-rest-tab');
@@ -6,12 +7,14 @@ const pauseBtn = document.getElementById('pause-btn');
 const stopBtn = document.getElementById('stop-btn');
 const timer = document.getElementById('timer');
 
+// VARIABLES
 let minutes = parseInt(timer.innerText.split(":")[0]);
 let seconds = parseInt(timer.innerText.split(":")[1]);
 let state = "POMODORO";
 let restCheck = 0;
 let pomodoroTime;
 
+// FUNCTIONS
 function reset() {
     minutes = parseInt(timer.innerText.split(":")[0]);
     seconds = parseInt(timer.innerText.split(":")[1]);
@@ -38,6 +41,7 @@ function setLongRest() {
     reset();
 }
 
+// EVENT LISTENERS
 startBtn.addEventListener('click', () => {
     pauseBtn.removeAttribute('disabled');
     stopBtn.removeAttribute('disabled');
